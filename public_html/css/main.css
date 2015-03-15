@@ -1,0 +1,11 @@
+#board{
+    width: 452px;
+    height: 452px;
+}
+
+.block{
+    width:  150px;
+    height: 150px;
+    margin-left: -2px;
+    font-size: 90px;
+}

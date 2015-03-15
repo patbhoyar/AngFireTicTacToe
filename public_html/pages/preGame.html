@@ -1,0 +1,21 @@
+<div data-ng-controller='PreGameController'>
+    <div id="playersInfoContainer" class="row">
+        <div class="playerInfo">
+            <label class="playerNameTitle" for="player1">Player 1's Name: </label>
+            <input type="text" id="player1" class='inputText' placeholder="John Smith" data-ng-model="player1">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" data-ng-click="selectedIcon(1,'x')">X</button>
+                <button type="button" class="btn btn-default" data-ng-click="selectedIcon(1,'o')">O</button>
+            </div>
+        </div>
+        <div class="playerInfo">
+            <label class="playerNameTitle" for="player2">Player 2's Name: </label>
+            <input type="text" id="player2" class='inputText' placeholder="Jane Stevens" data-ng-model="player2">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" data-ng-click="selectedIcon(2,'x')">X</button>
+                <button type="button" class="btn btn-default" data-ng-click="selectedIcon(2,'o')">O</button>
+            </div>
+        </div>
+        <button class='btn btn-info' data-ng-click="startGame()">Start Game</button>
+    </div>
+</div>
