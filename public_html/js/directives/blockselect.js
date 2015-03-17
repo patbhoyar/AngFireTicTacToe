@@ -19,11 +19,19 @@ app
                 $(element).text($scope.gameData.playerIcon);
                 $(element).attr('disabled','disabled');
                 
-                $scope.gameRef.update({
-                    playerTurn:$scope.changePlayer(),
-                    playerIcon:$scope.changePlayerTurn(),
-                    board: newIndices
+                $scope.gameData.$loaded().then(function() {
+                    $scope.updatedData = {
+                        playerTurn:$scope.changePlayer(),
+                        playerIcon:$scope.changePlayerTurn(),
+                        board: newIndices
+                    };
                 });
+                
+                if($scope.getGameStatus().gameStatus === 2){
+                    $scope.gameOver();
+                }else{
+                    $scope.gameRef.update($scope.updatedData);
+                }
             });
             
             $scope.changePlayer = function(){

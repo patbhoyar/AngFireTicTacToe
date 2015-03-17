@@ -22,7 +22,8 @@ app.controller("PreGameController", function($scope, $location) {
             player2Icon: $scope.player2Selection,
             board:['','','','','','','','',''],
             playerTurn:$scope.player1,
-            playerIcon:$scope.player1Selection
+            playerIcon:$scope.player1Selection,
+            gameStatus:0 //0-> Not Started, 1-> In Progress, 2-> Completed
         });
         $location.path('/playGame');
     }
